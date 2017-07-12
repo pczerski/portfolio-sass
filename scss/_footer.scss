@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'mixins';
+
+
+footer {
+    height: 30px;
+    background-color: #182b3a;
+    
+    #copyright {
+        font-size: 14px;
+        color: $white-font-color;
+        margin-left: 30px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+}

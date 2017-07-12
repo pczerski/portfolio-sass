@@ -1,0 +1,61 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+    font-family: $base-font;
+    font-size: 16px;
+    margin: 0;
+}
+
+p, h2, h3, #menu {
+    color: $base-font-color;
+    font-weight: 300;
+}
+
+h1, h2, h3 {
+    font-family: $header-font;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 90px;
+    color: $green-font-color;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 200;
+    color: $white-font-color;
+    text-align: center;
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 36px;
+    text-align: left;
+}
+
+.white-text {
+    color: $white-font-color;
+    font-weight: 300;
+}
+
+.green-text {
+    color: $green-font-color;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+#about, #skills, #contact {
+    padding-top: $section-padding-top;
+    padding-bottom: $section-padding-bottom;
+}

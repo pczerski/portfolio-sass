@@ -1,0 +1,172 @@
+@import 'variables';
+@import 'mixins';
+
+/* O MNIE */
+
+#about {
+    background-color: #f9fcfe;
+    #left-about,
+    #right-about {
+        width: 100%;
+    }
+    #left-about {
+        /*  Centrowanie zdjęcia  */
+        text-align: center;
+        #jan-nowak-photo {
+            border: 15px solid white;
+            border-radius: 15px;
+            width: 250px;
+        }
+    }
+    .row {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+/* UMIEJĘTNOŚCI */
+
+#skills {
+    text-align: center;
+    figure {
+        margin-top: 30px;
+    }
+}
+
+
+/* PORTFOLIO */
+
+#portfolio {
+    padding-top: $section-padding-top;
+    .container {
+        width: 100%;
+    }
+    .row,
+    .floated {
+        position: relative;
+        height: 350px;
+        background-size: cover;
+    }
+    #portfolio .row,
+    .floated .item-mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: rgba(42, 61, 79, 0.8);
+        opacity: 0;
+        transition: all .5s ease-in-out;
+        width: 100%;
+    }
+    #portfolio .row,
+    .floated,
+    .item-mask:hover {
+        opacity: 1;
+    }
+    #item-mask-border-1,
+    #item-mask-border-2,
+    #item-mask-border-3,
+    .item-mask-text {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.85;
+    }
+    #item-mask-border-1,
+    #item-mask-border-2,
+    #item-mask-border-3 {
+        width: 94%;
+        height: 92%;
+        border: 1px solid aliceblue;
+    }
+    .item-mask-text {
+        width: 350px;
+        height: 250px;
+        font-size: 15px;
+        font-weight: 300;
+        color: aliceblue;
+        text-align: center;
+    }
+    .items {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #item-1 {
+        background-image: url('../img/portfolio1.jpg');
+    }
+    #item-2 {
+        background-image: url('../img/portfolio2.jpg');
+    }
+    #item-3 {
+        background-image: url('../img/portfolio4.jpg');
+    }
+    .mask-font {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+
+/* KONTAKT */
+
+#contact {
+    background-color: #213b50;
+    padding-left: 50px;
+    padding-right: 50px;
+    #contact-data {
+        padding-bottom: 30px;
+    }
+    #contact-details {
+        color: $white-font-color;
+        padding-bottom: 30px;
+    }
+    .icon-box {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border: 1px solid white;
+        margin-right: 20px;
+        text-align: center;
+        line-height: 32px;
+        color: white;
+        transition-duration: .5s;
+    }
+    .icon-box:hover {
+        background-color: white;
+        color: #213b50;
+        transition-duration: .5s;
+    }
+    form {
+        margin-top: 10px;
+        .form-control {
+            margin-bottom: 20px;
+            background-color: #2b4a64;
+            border: none;
+            font-size: 16px;
+            color: $white-font-color;
+        }
+        input {
+            height: 45px;
+        }
+        .btn {
+            float: right;
+            background-color: $green-font-color;
+            color: $white-font-color;
+            font-size: 16px;
+            width: 100px;
+            height: 45px;
+            transition-duration: .5s;
+        }
+        .btn:hover {
+            background-color: darkturquoise;
+            transition-duration: .5s;
+        }
+        textarea {
+            resize: none;
+        }
+    }
+}

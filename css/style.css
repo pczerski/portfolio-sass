@@ -1,290 +1,213 @@
-/* WSPÓLNE */
+@charset "UTF-8";
 body {
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    margin: 0;
-}
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  margin: 0; }
 
 p, h2, h3, #menu {
-    color: #291f1a;
-    font-weight: 300;
-}
+  color: #777;
+  font-weight: 300; }
 
 h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
-}
+  font-family: "Roboto", sans-serif; }
 
 h1 {
-    font-weight: bold;
-    font-size: 90px;
-    color: #1ac056;
-    text-align: center;
-}
+  font-weight: bold;
+  font-size: 90px;
+  color: #1ac056;
+  text-align: center; }
 
 h2 {
-    font-size: 36px;
-    font-weight: 200;
-    color: aliceblue;
-    text-align: center;
-}
+  font-size: 36px;
+  font-weight: 200;
+  color: aliceblue;
+  text-align: center; }
 
 h3 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    text-align: center;
-}
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center; }
 
 h4 {
-    font-size: 36px;
-    text-align: left;
-}
+  font-size: 36px;
+  text-align: left; }
 
 .white-text {
-    color: aliceblue;
-    font-weight: 300;
-}
+  color: aliceblue;
+  font-weight: 300; }
 
 .green-text {
-    color: #1ac056;
-    font-weight: 500;
-}
+  color: #1ac056;
+  font-weight: 500; }
 
 a {
-    text-decoration: none;
-}
+  text-decoration: none; }
 
 #about, #skills, #contact {
-    padding-top: 50px;
-    padding-bottom: 70px;
-}
+  padding-top: 50px;
+  padding-bottom: 70px; }
 
-/* HEADER */
 #main-header {
-    position: relative; 
-    top: 0;
-    height: 100vh;
-    width: 100%;    
-}
-
-#title {
-    position: absolute;
-/*  Musi być podany rozmiar, bo inaczej się nie wypozycjonuje  */
-    width: 480px;
-    height: 290px;
-    margin: auto; 
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-#header-photo
-{
+  position: relative;
+  top: 0;
+  height: 100vh;
+  width: 100%; }
+  #main-header #header-photo {
     position: absolute;
     height: 100vh;
-    width: 100%; 
+    width: 100%;
     margin: 0;
     top: 0;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; 
-}
-
-.parallax { 
+    background-size: cover; }
+    #main-header #header-photo #title {
+      position: absolute;
+      /*  Musi być podany rozmiar, bo inaczej się nie wypozycjonuje  */
+      width: 480px;
+      height: 290px;
+      margin: auto;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0; }
+      #main-header #header-photo #title .white-text {
+        color: aliceblue;
+        font-weight: 300; }
+    #main-header #header-photo .navbar {
+      background-color: transparent;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border: none; }
+      #main-header #header-photo .navbar li {
+        right: 30px;
+        margin-left: 25px; }
+      #main-header #header-photo .navbar .navbar-toggle {
+        right: 30px; }
+      #main-header #header-photo .navbar ul {
+        text-align: right; }
+      #main-header #header-photo .navbar a {
+        color: aliceblue;
+        font-weight: 400;
+        transition-duration: .5s; }
+      #main-header #header-photo .navbar a:hover {
+        color: #1ac056;
+        transition-duration: .5s; }
+      #main-header #header-photo .navbar .icon-bar {
+        background-color: #1ac056; }
+      #main-header #header-photo .navbar .navbar-toggle {
+        background-color: transparent; }
+      #main-header #header-photo .navbar .navbar-toggle:hover {
+        background-color: #1ac056; }
+      #main-header #header-photo .navbar .navbar-toggle:hover .icon-bar {
+        background-color: aliceblue; }
+    #main-header #header-photo .menu-class {
+      background-color: rgba(0, 0, 0, 0.4);
+      width: 100%;
+      z-index: 10; }
+  #main-header .parallax {
     background-image: url("../img/header-background.jpg");
-    height: 100%; 
+    height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Menu */
-.navbar-fixed-top {
-    background-color: transparent;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: none;
-}
-
-li {
-    right: 30px;
-    margin-left: 25px;
-}
-
-.navbar-toggle {
-    right: 30px;
-}
-
-ul {
-    text-align: right;
-}
-
-.navbar.menu-class { 
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    z-index: 10;
-}
-
-.navbar.menu-class a {
-    color: #1ac056;
-}
-
-#main-header a {
-    color: aliceblue;
-    font-weight: 400;
-}
-
-#main-header a:hover {
-    color: #1ac056;
-}
-
-#main-header .icon-bar {
-    background-color: #1ac056;
-}
-
-#main-header .navbar-toggle {
-    background-color: transparent;
-}
-
-#main-header .navbar-toggle:hover {
-    background-color: #1ac056;
-}
-
-#main-header .navbar-toggle:hover .icon-bar {
-    background-color: aliceblue;
-}
+    background-size: cover; }
 
 /* O MNIE */
 #about {
-    //width: 100%;
-    background-color: #f9fcfe;
-}
-
-#left-about, #right-about {
-    width: 100%;
-}
-
-#left-about {
-/*  Centrowanie zdjęcia  */
-    text-align: center;
-}
-
-#jan-nowak-photo {
-    border: 15px solid white;
-    border-radius: 15px;
-    width: 250px;
-}
-
-#about .row {
-   display: flex;
-   align-items: center; 
- }
+  background-color: #f9fcfe; }
+  #about #left-about,
+  #about #right-about {
+    width: 100%; }
+  #about #left-about {
+    /*  Centrowanie zdjęcia  */
+    text-align: center; }
+    #about #left-about #jan-nowak-photo {
+      border: 15px solid white;
+      border-radius: 15px;
+      width: 250px; }
+  #about .row {
+    display: flex;
+    align-items: center; }
 
 /* UMIEJĘTNOŚCI */
 #skills {
-    text-align: center;
-}
-
-#skills figure {
-    margin-top: 30px;
-}
+  text-align: center; }
+  #skills figure {
+    margin-top: 30px; }
 
 /* PORTFOLIO */
 #portfolio {
-    padding-top: 50px;
-    text-align: center;
-}
-
-#portfolio .container {
-    width: 100%;
-}
-
-#portfolio #portfolio .row, .floated {
+  padding-top: 50px; }
+  #portfolio .container {
+    width: 100%; }
+  #portfolio .row,
+  #portfolio .floated {
     position: relative;
     height: 350px;
-    background-size: cover;
-}
-
-#portfolio #portfolio .row, .floated .item-mask {
+    background-size: cover; }
+  #portfolio #portfolio .row,
+  #portfolio .floated .item-mask {
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     background: rgba(42, 61, 79, 0.8);
     opacity: 0;
-    transition:  all .5s ease-in-out;
-    width: 100%;
-}
-
-#portfolio #portfolio .row, .floated .item-mask:hover {
-    opacity: 1;
-}
-
-#item-mask-border-1, #item-mask-border-2, #item-mask-border-3, .item-mask-text {
+    transition: all .5s ease-in-out;
+    width: 100%; }
+  #portfolio #portfolio .row,
+  #portfolio .floated,
+  #portfolio .item-mask:hover {
+    opacity: 1; }
+  #portfolio #item-mask-border-1,
+  #portfolio #item-mask-border-2,
+  #portfolio #item-mask-border-3,
+  #portfolio .item-mask-text {
     position: absolute;
     margin: auto;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.85;
-}
-
-#item-mask-border-1, #item-mask-border-2, #item-mask-border-3 {
+    opacity: 0.85; }
+  #portfolio #item-mask-border-1,
+  #portfolio #item-mask-border-2,
+  #portfolio #item-mask-border-3 {
     width: 94%;
     height: 92%;
-    border: 1px solid aliceblue;
-}
-
-.item-mask-text {
+    border: 1px solid aliceblue; }
+  #portfolio .item-mask-text {
     width: 350px;
     height: 250px;
     font-size: 15px;
     font-weight: 300;
     color: aliceblue;
-    text-align: center;
-}
-
-.items {
+    text-align: center; }
+  #portfolio .items {
     padding-left: 0;
-    padding-right: 0;
-}
-
-#item-1 {
-    background-image: url('../img/portfolio1.jpg');
-}
-
-#item-2{
-    background-image: url('../img/portfolio2.jpg');
-}
-
-#item-3{
-    background-image: url('../img/portfolio4.jpg');
-}
-
-.mask-font {
+    padding-right: 0; }
+  #portfolio #item-1 {
+    background-image: url("../img/portfolio1.jpg"); }
+  #portfolio #item-2 {
+    background-image: url("../img/portfolio2.jpg"); }
+  #portfolio #item-3 {
+    background-image: url("../img/portfolio4.jpg"); }
+  #portfolio .mask-font {
     font-size: 18px;
-    font-weight: bold;
-}
+    font-weight: bold; }
 
 /* KONTAKT */
 #contact {
-    background-color: #213b50;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-#contact-data {
-    padding-bottom: 30px;
-}
-
-#contact-details {
+  background-color: #213b50;
+  padding-left: 50px;
+  padding-right: 50px; }
+  #contact #contact-data {
+    padding-bottom: 30px; }
+  #contact #contact-details {
     color: aliceblue;
-    padding-bottom: 30px;
-}
-
-.icon-box {
+    padding-bottom: 30px; }
+  #contact .icon-box {
     display: inline-block;
     width: 32px;
     height: 32px;
@@ -293,59 +216,41 @@ ul {
     text-align: center;
     line-height: 32px;
     color: white;
-    transition-duration: .5s;
-}
-
-.icon-box:hover {
+    transition-duration: .5s; }
+  #contact .icon-box:hover {
     background-color: white;
     color: #213b50;
-    transition-duration: .5s;
-}
-
-form {
-    margin-top: 10px;
-}
-
-#contact input {
-    height: 45px;
-}
-
-.form-control {
-    margin-bottom: 20px;
-    background-color: #2b4a64;
-    border: none;
-    font-size: 16px;
-    color: aliceblue;
-}
-
-textarea {
-    resize: none;
-}
-
-#contact .btn {
-    float: right;
-    background-color: #1ac056;
-    color: aliceblue;
-    font-size: 16px;
-    width: 100px;
-    height: 45px;
-    transition-duration: .5s;
-}
-
-#contact .btn:hover {
-    background-color:darkturquoise;
-    transition-duration: .5s;
-}
+    transition-duration: .5s; }
+  #contact form {
+    margin-top: 10px; }
+    #contact form .form-control {
+      margin-bottom: 20px;
+      background-color: #2b4a64;
+      border: none;
+      font-size: 16px;
+      color: aliceblue; }
+    #contact form input {
+      height: 45px; }
+    #contact form .btn {
+      float: right;
+      background-color: #1ac056;
+      color: aliceblue;
+      font-size: 16px;
+      width: 100px;
+      height: 45px;
+      transition-duration: .5s; }
+    #contact form .btn:hover {
+      background-color: darkturquoise;
+      transition-duration: .5s; }
+    #contact form textarea {
+      resize: none; }
 
 footer {
-    height: 30px;
-    background-color: #182b3a;  
-}
-
-#copyright {
+  height: 30px;
+  background-color: #182b3a; }
+  footer #copyright {
     font-size: 14px;
     color: aliceblue;
     margin-left: 30px;
     padding-bottom: 5px;
-    padding-top: 5px;
-}
+    padding-top: 5px; }

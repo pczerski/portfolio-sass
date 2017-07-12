@@ -1,0 +1,99 @@
+@import 'variables';
+@import 'mixins';
+
+#main-header {
+    position: relative;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    
+    #header-photo {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        top: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        
+        #title {
+            position: absolute;
+            /*  Musi być podany rozmiar, bo inaczej się nie wypozycjonuje  */
+            width: 480px;
+            height: 290px;
+            margin: auto;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            
+            .white-text {
+                color: $white-font-color;
+                font-weight: 300;
+            }
+        }
+        
+        .navbar {
+            background-color: transparent;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border: none;
+            
+            li {
+                right: 30px;
+                margin-left: 25px;
+            }
+            
+            .navbar-toggle {
+                right: 30px;
+            }
+            
+            ul {
+                text-align: right;
+            }
+            
+            a {
+                color: $white-font-color;
+                font-weight: 400;
+                transition-duration: .5s;
+            }
+            
+            a:hover {
+                color: $green-font-color;
+                transition-duration: .5s;
+            }
+            
+            .icon-bar {
+                background-color: $green-font-color;
+            }
+            
+            .navbar-toggle {
+                background-color: transparent;
+            }
+            
+            .navbar-toggle:hover {
+                background-color: $green-font-color;
+            }
+            
+            .navbar-toggle:hover .icon-bar {
+                background-color: $white-font-color;
+            }
+        }        
+        
+        .menu-class {
+            background-color: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            z-index: 10;
+        }
+    }
+    
+    .parallax {
+        background-image: url("../img/header-background.jpg");
+        height: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
