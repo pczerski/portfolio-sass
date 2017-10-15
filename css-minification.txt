@@ -1,0 +1,18 @@
+npm install --save-dev gulp-minify-css - jeœli jeszcze nie zainstalowane
+
+Dodaj do gulpile.js
+// including plugins
+var gulp = require('gulp')
+, minifyCss = require("gulp-minify-css");
+ 
+// task
+gulp.task('minify-css', function () {
+    gulp.src('./Css/one.css') // path to your file
+    .pipe(minifyCss())
+    .pipe(gulp.dest('path/to/destination'));
+});
+
+Odpal poni¿sz¹ komendê w katalogu gulpfile.js
+gulp minify-css
+
+https://julienrenaux.fr/2014/05/25/introduction-to-gulp-js-with-practical-examples/

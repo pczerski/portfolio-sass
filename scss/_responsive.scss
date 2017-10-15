@@ -1,10 +1,16 @@
 @import 'variables';
 @import 'mixins';
 
-@media screen and (max-width: 768px) {
+/*  ABOUT  */
+
+@media screen and (max-width: 992px) {
     #about {
-        .row {
-            /*    Anulowanie flexa, aby tekst przesunął się pod zdjęcie    */
+        #about-left,
+        #about-right {
+            width: 100%;
+        }
+        #about-right {
+            /* Anulowanie flexa */
             display: initial;
         }
     }

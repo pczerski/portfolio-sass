@@ -2,60 +2,91 @@
 @import 'mixins';
 
 body {
-    font-family: $base-font;
-    font-size: 16px;
     margin: 0;
-}
-
-p, h2, h3, #menu {
-    color: $base-font-color;
-    font-weight: 300;
-}
-
-h1, h2, h3 {
-    font-family: $header-font;
-}
-
-h1 {
-    font-weight: bold;
-    font-size: 90px;
-    color: $green-font-color;
-    text-align: center;
-}
-
-h2 {
-    font-size: 36px;
-    font-weight: 200;
-    color: $white-font-color;
-    text-align: center;
-}
-
-h3 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-h4 {
-    font-size: 36px;
-    text-align: left;
-}
-
-.white-text {
-    color: $white-font-color;
-    font-weight: 300;
-}
-
-.green-text {
-    color: $green-font-color;
-    font-weight: 500;
-}
-
-a {
-    text-decoration: none;
-}
-
-#about, #skills, #portfolio, #contact {
-    padding-top: $section-padding-top;
-    padding-bottom: $section-padding-bottom;
+    font-family: $base-font;
+    font-size: $base-font-size;
+    
+    p {
+        font-size: $base-font-size;
+        font-weight: 300;
+        text-align: left;
+        line-height: 25px;
+    }
+    
+    h1,
+    h2 {
+        margin: auto;
+        text-align: center;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: $header-font;
+    }
+    
+    h1,
+    h3,
+    h4,
+    #contact-data a {
+        color: $font-color-green;
+    }
+    
+    h2,
+    .white-text,
+    #name-text,
+    #contact-data,
+    #copyright {
+        color: $white-color;
+    }
+    
+    h1 {
+        font-size: 136px;
+        font-weight: 400;
+    }
+    
+    h2 {
+        font-size: 40px;
+        font-weight: 100;
+    }
+    
+    h3 {
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 35px;
+    }
+    
+    h4 {
+        font-size: 36px;
+        font-weight: 400;
+    }
+    
+    .white-text {
+        font-weight: 200;
+    }
+    
+    .black-text,
+    #name-text,
+    #contact-data,
+    #copyright,
+    
+    .form-control {
+        font-weight: 300;
+        font-family: $base-font;
+    }
+    
+    .black-text {
+        color: $font-color-black;
+    }
+    
+    #about,
+    #skills,
+    #portfolio,
+    #contact {
+        padding-left: $section-padding-side;
+        padding-right: $section-padding-side;
+        padding-top: $section-padding-top;
+        padding-bottom: $section-padding-bottom;
+    }
 }

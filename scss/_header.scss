@@ -1,82 +1,62 @@
 @import 'variables';
 @import 'mixins';
 
-/* HEADER */
-
 #main-header {
-    height: 100vh;
+    position: relative;
     
-    #header-photo {
+    .parallax {
+        background-image: url("../img/header-background.jpg");
         height: 100vh;
-
-        #title {
-            @include centering;
-            width: 480px;
-            height: 290px;
-            
-            .white-text {
-                color: $white-font-color;
-                font-weight: 300;
-            }
-        }
-        /* MENU */
-        .navbar {
+        background-attachment: fixed;
+        @include background-settings(center, cover);
+        
+        nav {
             background-color: transparent;
-            padding-top: 5px;
-            padding-bottom: 5px;
             border: none;
+            padding-right: 30px;
             
-            li {
-                right: 30px;
-                margin-left: 25px;
+            .navbar-header {         
+                
+                .navbar-toggle {
+                    background-color: transparent;
+                    &:hover {
+                        background-color: $font-color-green;
+                    }
+                    
+                    .icon-bar {
+                        background-color: $white-color;
+                        }                    
+                    }            
             }
-           
-            ul {
+            .navbar-collapse {
                 text-align: right;
-            }
+                border: none;                
+                } 
             
-            a {
-                color: $white-font-color;
-                font-weight: 400;
-                transition-duration: .5s;
+            #myNavbar {
                 
-                &:hover {
-                    color: $green-font-color;
-                    transition-duration: .5s;
-                }
-            }
-            
-            .icon-bar {
-                background-color: $green-font-color;
-            }
-            
-            .navbar-toggle {
-                background-color: transparent;
-                right: 30px;
-                
-                &:hover {
-                    background-color: $green-font-color;
-                }
-                
-                &:hover .icon-bar {
-                    background-color: $white-font-color;
+                ul {
+                    
+                    li>a {
+                        color: $white-color;
+                        margin-top: 7px;
+                        margin-left: 30px;
+                        &:hover {
+                            color: $font-color-green;
+                        }
+                    }
                 }
             }
         }
         
         .menu-class {
-            background-color: rgba(0, 0, 0, 0.4);
-            width: 100%;
-            z-index: 10;
+            background-color: rgba(0, 0, 0, .6);
+            padding-bottom: 10px;
         }
-    }
-    
-    .parallax {
-        background-image: url("../img/header-background.jpg");
-        height: 100%;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        
+        #title {
+            @include center_tr;
+            width: 750px;
+        }
     }
 }
